@@ -1,0 +1,22 @@
+<md-dialog class="dialog-level" aria-label="Dialog">
+    <img src="/img/bglevel.svg">
+    <div style="position: absolute;top: 0;left:0;width: 100%;height: 100%" layout="column">
+        <div flex="15"></div>
+        <div flex="25" layout="row" layout-align="center center" >
+            <img flex="20" class="avatar" ng-src="{{data.avatar}}">
+        </div>
+        <div flex="20" layout="row" layout-wrap class="title" layout-align="center center">CHÚC MỪNG, BẠN ĐÃ LÊN CẤP!</div>
+        <div flex="20" layout="row">
+            <div flex="15"></div>
+            <div flex layout="column">
+                <div flex>
+                <md-progress-linear ng-show="isCounting" class="exp-progress-dialog" md-mode="determinate" value="{{data | expPercent}}"></md-progress-linear>
+                </div>
+                <div flex class="exp-info">{{data.exp}}/{{data.next}}</div>
+            </div>
+            <div flex="15"></div>
+        </div>
+        <div flex="20">
+        </div>
+    </div>
+</md-dialog>

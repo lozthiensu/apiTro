@@ -1,0 +1,40 @@
+<script async defer type="text/javascript" src="/js/ads.js"></script>
+<script async defer type="text/javascript" src="/js/html2canvas.js"></script>
+
+<div ng-controller="PlayController" ng-init="loadGame()" >
+    <div class="game-section" id="contentElement" flex>
+        <!--them game vao day-->
+        <div class="game-area">
+            <div class="game-frame" ng-if="!isInit" ng-show="isPlay && !isEnd" ng-include="games.currentGame.link" onload="finishLoading()"></div>
+        </div>
+
+
+        <!--<div ng-if="!games.isLoading" ng-include="'/sources/game/9/'" onload="finishLoading()"></div>-->
+        <div ng-if="!isPlay" class="pre-game" layout="column" layout-align="center center">
+            <md-progress-circular ng-if="isLoad"  md-mode="indeterminate" md-diameter="100"></md-progress-circular>
+            <md-button ng-if="!isLoad" ng-click="onPlay()" class="md-raised md-primary btn-play"><i class="ion-play"></i><span> Chơi Game</span></md-button>
+        </div>
+        <div ng-if="isEnd"  class="recommend-games animate-if" layout="column" layout-padding layout-align="center center">
+            <div layout="row" layout-wrap >
+                <div id="canvan" ng-bind-html="result | trustAsHTML"></div>
+            </div>
+            <div layout="row" layout-wrap layout-align="center center">
+                <md-button flex-xs="100" ng-disabled="submitting" class="md-raised md-facebook recommend-btn" ng-click="onShareFacebook()">
+                    <i class="ion-social-facebook" style="font-size: 1.25em"></i>
+                    <span ng-if="!submitting">Chia sẻ điểm</span>
+                    <span ng-if="submitting">Đang chia sẻ</span>
+                </md-button>
+                <md-button flex-xs="100" class="md-raised md-accent recommend-btn" ng-click="onPlay()">
+                    <i class="ion-refresh" style="font-size: 1.25em"></i>
+                    Chơi lại
+                </md-button>
+            </div>
+            <div layout="row" class="group-game-card" layout-wrap>
+                <game-card ng-repeat="item in games.data track by $index" ng-if="filterMobile($index)" item="item" flex="33" flex-sm="50" flex-xs="100" class="recommend-card"></game-card>
+            </div>
+        </div>
+    </div>
+    <div class="mainAds" id="mainAds" style="position: absolute;width: 100%;top: 0;margin: 0 auto 0;z-index: 9999;left: 0;right: 0;">
+        <div id="adContainer" ng-click="skipAds()" style="position: relative;margin: 0px auto;"></div>
+    </div>
+</div>

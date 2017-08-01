@@ -1,0 +1,6 @@
+<md-subheader class="md-no-sticky">Thể loại</md-subheader>
+<md-list-item ng-repeat="item in $root.topics" ng-href="/topic/{{::item._id}}">
+    <i ng-class="::item.icon" style="padding-right: 5px" ></i>
+    <p> {{::item.name}} </p>
+    <md-divider></md-divider>
+</md-list-item>

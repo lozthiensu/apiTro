@@ -1,0 +1,9 @@
+<md-dialog aria-label="Dialog">
+    <md-dialog-content class="dialog-signin" layout-padding>
+        <h2 layout="row" layout-align="center">{{data.user.username}} mời bạn chơi {{data.game.title}}</h2>
+        <div layout="row">
+            <md-button flex="50" ng-click="goRoom()" aria-label="goroom" class="md-raised md-primary">Vào</md-button>
+            <md-button flex="50" ng-click="cancel()" aria-label="cancel" class="md-raised">Không</md-button>
+        </div>
+    </md-dialog-content>
+</md-dialog>
