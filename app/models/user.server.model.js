@@ -15,7 +15,7 @@ var UserSchema = new Schema({
 		lng: Number
 	},
 	price: Number,
-	notification: Boolean
+	typeNotification: Number
 });
 
 mongoose.model('User', UserSchema);

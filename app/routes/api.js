@@ -7,4 +7,5 @@ module.exports = function (router) {
 	router.route('/login').post(user.login);
 	router.route('/setPrice').post(user.setPrice);
 	router.route('/setAddress').post(user.setAddress);
+	router.route('/setTypeNotification').post(user.setTypeNotification);
 };
