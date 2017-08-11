@@ -2,9 +2,11 @@
  * Created by baohq on 7/24/17.
  */
 var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+	Schema = mongoose.Schema,
+	ObjectId = Schema.ObjectId;
 var PostSchema = new Schema({
-	_id: String,
+	_id: ObjectId,
+	id: String,
 	group_id: String,
 	created_time: Number,
 	updated_time: Number,

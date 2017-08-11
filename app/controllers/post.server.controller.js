@@ -40,11 +40,11 @@ exports.loadNewerFeeds = function (req, res) {
 	console.log(mongoose.Types.ObjectId.isValid(lastPostId));
 
 	Post.find({
-		_id: {
+		id: {
 			$gt: oid
 		}
 	}).limit(100).sort({
-		"_id": -1
+		"created_time": -1
 	}).exec(function (err, result) {
 		if (err) console.log('Error', err);
 		res.json(result);
