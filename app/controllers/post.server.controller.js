@@ -25,7 +25,7 @@ exports.loadFeeds = function (req, res) {
 		console.log(query);
 	}
 	Post.find(query).skip(NUMOFPOST * (page - 1)).limit(NUMOFPOST).sort({
-		sortBy: -1
+		"created_time": -1
 	}).exec(function (err, result) {
 		if (err) console.log('Error', err);
 		res.json(result);
