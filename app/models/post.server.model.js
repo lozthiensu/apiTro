@@ -9,6 +9,7 @@ var PostSchema = new Schema({
 	created_time: Number,
 	updated_time: Number,
 	address: String,
+	location: {},
 	phone: String,
 	type: Number,
 	price: Number

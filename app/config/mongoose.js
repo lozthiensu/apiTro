@@ -18,5 +18,8 @@ module.exports = function (callback) {
 	require('../models/user.server.model');
 	require('../models/price.server.model');
 	require('../models/location.server.model');
+	require('../models/all.server.model');
+	require('../models/priceAndLocation.server.model');
+	require('../models/notification.server.model');
 	return db;
 };

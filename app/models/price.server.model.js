@@ -9,6 +9,7 @@ var PriceSchema = new Schema({
         {
             userId:''
             , playerId:''
+            , price: 0
         }
     ]
 });

@@ -8,4 +8,6 @@ module.exports = function (router) {
 	router.route('/setPrice').post(user.setPrice);
 	router.route('/setAddress').post(user.setAddress);
 	router.route('/setTypeNotification').post(user.setTypeNotification);
+	router.route('/getNotifications').post(user.getNotifications);
+	router.route('/viewNotification').post(user.viewNotification);
 };
