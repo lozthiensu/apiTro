@@ -332,7 +332,7 @@ exports.setTypeNotification = function (req, res) {
                                             console.log(resPullPrice);
                                             // Pull all
                                             pullAll({
-                                                "_id": userInfo._id,
+                                                "id": userInfo._id,
                                                 "playerId": userInfo.playerId
                                             }, function (resPullAll) {
                                                 console.log(resPullAll);
@@ -379,7 +379,7 @@ exports.setTypeNotification = function (req, res) {
                                             console.log(resPullPriceAndLocation);
                                             // Pull all
                                             pullAll({
-                                                "_id": userInfo._id,
+                                                "id": userInfo._id,
                                                 "playerId": userInfo.playerId
                                             }, function (resPullAll) {
                                                 console.log(resPullAll);
@@ -427,7 +427,7 @@ exports.setTypeNotification = function (req, res) {
                                             console.log(resPullPriceAndLocation);
                                             // Pull all
                                             pullAll({
-                                                "_id": userInfo._id,
+                                                "id": userInfo._id,
                                                 "playerId": userInfo.playerId
                                             }, function (resPullAll) {
                                                 console.log(resPullAll);
@@ -441,7 +441,7 @@ exports.setTypeNotification = function (req, res) {
                             // Push all
                             console.log('Chuan bi push all');
                             pushAll({
-                                "_id": userInfo._id,
+                                "id": userInfo._id,
                                 "playerId": userInfo.playerId
                             }, function (resPushAll) {
                                 console.log('Rs push all', resPushAll);
@@ -485,7 +485,7 @@ exports.setTypeNotification = function (req, res) {
                             // Pull all
                             console.log('Chuan bi pull all');
                             pullAll({
-                                "_id": userInfo._id,
+                                "id": userInfo._id,
                                 "playerId": userInfo.playerId
                             }, function (resPullAll) {
                                 console.log(resPullAll);

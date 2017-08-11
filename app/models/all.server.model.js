@@ -4,7 +4,7 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 var AllSchema = new Schema({
-	_id: String,
+	id: String,
     playerId: String
 });
 

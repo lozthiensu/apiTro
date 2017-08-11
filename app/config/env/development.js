@@ -2,8 +2,8 @@
  * Created by andh on 7/19/16.
  */
 module.exports = {
-	// db: 'mongodb://admin:funbegin@127.0.0.1:61511/funstart',
-	db: 'mongodb://localhost:27017/timtro',
+	 db: 'mongodb://timtro:Qu%40ng.b%40o1994@45.77.33.147:27017/timtro',
+//	db: 'mongodb://localhost:27017/timtro',
 	sessionSecret: 'PDLDHAHQTVTD',
 	key: {
 		privateKey: 'CaS4mWZDOVghh122',
